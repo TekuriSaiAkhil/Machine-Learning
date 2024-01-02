@@ -1,0 +1,17 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="domainUrlRatio <= 0.25\nentropy = 0.97\nsamples = 5199\nvalue = [2067, 3132]\nclass = phishing", fillcolor="#bcdef6"] ;
+1 [label="domainlength <= 15.5\nentropy = 0.92\nsamples = 2894\nvalue = [1934, 960]\nclass = benign", fillcolor="#f2c09b"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="entropy = 0.7\nsamples = 2317\nvalue = [1874, 443]\nclass = benign", fillcolor="#eb9f68"] ;
+1 -> 2 ;
+3 [label="entropy = 0.48\nsamples = 577\nvalue = [60, 517]\nclass = phishing", fillcolor="#50a8e8"] ;
+1 -> 3 ;
+4 [label="pathurlRatio <= 0.53\nentropy = 0.32\nsamples = 2305\nvalue = [133, 2172]\nclass = phishing", fillcolor="#45a3e7"] ;
+0 -> 4 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+5 [label="entropy = 0.04\nsamples = 1548\nvalue = [7, 1541]\nclass = phishing", fillcolor="#3a9de5"] ;
+4 -> 5 ;
+6 [label="entropy = 0.65\nsamples = 757\nvalue = [126, 631]\nclass = phishing", fillcolor="#61b1ea"] ;
+4 -> 6 ;
+}
